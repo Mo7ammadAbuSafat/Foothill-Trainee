@@ -2,6 +2,7 @@
 using static Solve_5_Any_LeetCode_Questions.MedianOfTwoSortedArrays;
 using static Solve_5_Any_LeetCode_Questions.StringToIntegerAtoi;
 using static Solve_5_Any_LeetCode_Questions.ToeplitzMatrix;
+using static Solve_5_Any_LeetCode_Questions.LRUCache;
 
 namespace Solve_5_Any_LeetCode_Questions
 
@@ -26,9 +27,6 @@ namespace Solve_5_Any_LeetCode_Questions
             numbers[2] = new int[] { 1, 2, 1 };
             Console.WriteLine(IsToeplitzMatrix(numbers));
 
-            Dictionary<int, int> map = new Dictionary<int, int>();
-            map.Add(1, 5);
-            map.Add(5, 3);
         }
     }
 }
