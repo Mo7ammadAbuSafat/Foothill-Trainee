@@ -1,6 +1,6 @@
-﻿
-using static LeetCode.Sort;
+﻿using static LeetCode.Sort;
 using static LeetCode.LargestSum;
+using static LeetCode.RotateRight;
 namespace LeetCode
 {
     class RunTime
