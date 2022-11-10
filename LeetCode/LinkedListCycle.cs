@@ -24,5 +24,35 @@
             }
             return null;
         }
+
+        public ListNode DetectCycle2(ListNode head)
+        {
+            if (head == null || head.next == null)
+            {
+                return null;
+            }
+            ListNode slow = head.next;
+            ListNode fast = head.next.next;
+            
+            while (slow != fast)
+            {
+                if (fast.next == null || fast.next.next == null)
+                    return null;
+
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+
+            ListNode current = slow;
+
+            ListNode copyHead = head;
+            while (copyHead != current)
+            {
+                copyHead = copyHead.next;
+                current = current.next;
+            }
+
+            return current;
+        }
     }
 }
