@@ -4,7 +4,7 @@
     {
 
         private int capacity;
-        private Dictionary<int, int> dictionary;
+        private Dictionary<int, (LinkedListNode<int>,int)> dictionary;
         private LinkedList<int> List;
 
         public LRUCache(int capacity)
