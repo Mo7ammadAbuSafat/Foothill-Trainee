@@ -42,16 +42,16 @@ namespace LeetCode
             return result;
         }
 
-        public int[] SearchRange3(int[] nums, int k)
+        public int[] SearchRange3(int[] nums, int target)
         {
             int first = -1, last = -1;
             int l = 0, r = nums.Length - 1;
             while (l <= r)
             {
                 int mid = (l + r) / 2;
-                if (nums[mid] < k)
+                if (nums[mid] < target)
                     l = mid + 1;
-                else if (nums[mid] > k)
+                else if (nums[mid] > target)
                     r = mid - 1;
                 else
                 {
@@ -64,9 +64,9 @@ namespace LeetCode
             while (l <= r)
             {
                 int mid = (l + r) / 2;
-                if (nums[mid] < k)
+                if (nums[mid] < target)
                     l = mid + 1;
-                else if (nums[mid] > k)
+                else if (nums[mid] > target)
                     r = mid - 1;
                 else
                 {
