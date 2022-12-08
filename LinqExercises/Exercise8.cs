@@ -1,12 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace LinqExercises
+namespace AllTogether1
 {
-    internal class Exercise8
+    public class FullExercise2
     {
+        // Given a sequence of words, get rid of any that don't have the character 'e' in them,
+        // then sort the remaining words alphabetically, then return the following phrase using
+        // only the final word in the resulting sequence:
+        //    -> "The last word is <word>"
+        // If there are no words with the character 'e' in them, then return null.
+        //
+        // TRY to do it all using only LINQ statements. No loops or if statements.
+        public static string? GetTheLastWord(IEnumerable<string> words)
+        {
+            return words
+                // .???().???() ... .???()
+                .Where(word => word.Any(c => c == 'e'))
+                .OrderBy(word => word)
+                .Select(word => $"The last word is {word}")
+                .LastOrDefault()
+                ;
+        }
     }
 }
