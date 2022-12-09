@@ -18,13 +18,18 @@ namespace Generators2
         // }
         public static IEnumerable<int> AddTwoThenDouble(int n)
         {
-            int evenOrOdd = 0;
             int nextVal = 0;
 
             for (int i = 0; i < n; i++)
             {
-                nextVal = evenOrOdd % 2 == 0 ? nextVal + 2 : nextVal * 2;
-                evenOrOdd++;
+                if (i % 2 == 0)
+                {
+                    nextVal = nextVal + 2;
+                }
+                else
+                {
+                    nextVal = nextVal * 2;
+                }  
                 yield return nextVal;
             }
         }
